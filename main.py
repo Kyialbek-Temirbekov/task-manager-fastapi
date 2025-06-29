@@ -7,7 +7,7 @@ from app.db.database import engine, Base
 from app.db.database import get_db
 
 async def lifespan_handler(app):
-    Base.metadata.create_all(bind=engine)
+    # Base.metadata.create_all(bind=engine)
     yield
 
 app = FastAPI(lifespan=lifespan_handler)
