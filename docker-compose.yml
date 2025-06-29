@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: task_m
+      POSTGRES_DB: task_m_py
     ports:
       - "5432:5432"
     healthcheck:
