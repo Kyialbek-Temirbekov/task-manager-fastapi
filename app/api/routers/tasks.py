@@ -15,3 +15,7 @@ def create_task(task_sc: TaskCreate, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(task)
     return Response(status_code=200)
+
+@router.get("")
+def find_all(db: Session = Depends(get_db)):
+    return db.query(Task).all()
